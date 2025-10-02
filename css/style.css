@@ -1,0 +1,268 @@
+/*  -----------  */
+/*  CSS General  */
+/*  ------------ */
+
+* { /* Selector universal */
+    margin:0 ; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+
+html { 
+    font-size: 62.5%; /* Para que 1rem = 10px */
+    color:#000 
+}
+body {
+    font-family: "roboto condensed", "Montserrat", "san-serif";
+    font-size: 1.6rem;
+    color: #1B4079;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*  ----------  */
+/*    Header    */
+/*  ----------  */
+
+.header__logo {
+    width: 70px;
+    padding: 1rem;
+    margin-left: 2rem;    
+}
+
+.header {
+    background: #7f9C96;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.header nav {
+    padding: 1rem;
+    margin-right:2rem;
+}
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.header__nav {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.header__nav a {
+    text-decoration: none;
+    color:#1B4079;
+    display: inline-block;
+    padding:1rem
+} 
+
+/*  -----------  */
+/*     Main      */
+/*  ------------ */
+
+main {
+    width: 100%;
+    flex: 1;
+    padding: 30px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #7f9c9677;
+}
+.titulo__home {
+    color: #4D7C8A;
+    font-size: 6rem;
+    width: 100%;
+    background: #7F9C96 ;
+    background: linear-gradient(90deg,rgba(127, 156, 150, 1) 0%, rgba(143, 173, 136, 1) 50%, rgba(203, 223, 144, 1) 100%);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.parrafo_bienvenida {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/*  ----------  */
+/*   Producto   */
+/*  ----------  */
+
+.titulo__productos {
+    font-size: 6rem;
+    margin:1rem 0 2rem;
+}
+.productos { 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: stretch; 
+    margin-bottom: 3rem;
+} 
+ 
+.producto { 
+    margin: 10px;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    align-items: stretch;
+    gap: 1rem;
+} 
+
+.producto img {
+    width: 100%;
+    /*height: 200px;       / *todas igual de altas */
+    object-fit: contain; /* que no se deformen */
+}
+.nombre_producto {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+.producto_descripcion {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    flex-grow: 1; /* se expande para empujar el resto hacia abajo */
+}
+.producto_precio {
+    margin-top: auto;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: #1B4079;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #fff;
+}
+
+/*  ----------------------------------------------------------  */
+/*     media query de Home incluyendo Header, Body y Footer     */
+/*  ----------------------------------------------------------  */
+@media (max-width:768px) {
+    .header__logo {
+        margin-left: 1rem;
+    }
+    .header nav {
+        margin-right: 1rem;
+    }
+    .header nav ul {
+    gap: 1rem;
+    }
+
+    .titulo__home {
+        font-size: 5rem;
+        margin-top: 3rem;
+    }
+    .parrafo_bienvenida {
+    text-align: justify;
+    font-size: 2.5rem;
+    }
+}
+
+/*  ----------  */
+/*   Contacto   */
+/*  ----------  */
+
+.contacto {
+    display: flex;
+    justify-content: center;
+}
+.titulo__contacto {
+    margin: 1rem 0 2rem;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-align: center;
+    font-size: 4rem;
+}
+.formulario {
+    margin: 5rem 1rem;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px;
+    background: #2196F3;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #2196F3;
+}
+label {
+    font-weight: 800;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.campo__form {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+input, textarea {
+    padding: 1rem 0.5rem; /*espaciado interno a las casillas del formulario */
+    font-family: "roboto condensed", "Montserrat", "san-serif";
+}
+
+.boton__enviar {
+    margin-top: 25px;
+    padding: 10px 15px;
+    border: 2px solid #01284f;
+    background-color: #01284f;
+    color:#fff;
+    border-radius: 10px;
+}
+.boton__enviar:hover {
+    background: #7f9C96;
+    /* border: 2px solid #7f9C96; */
+    color: #01284f;
+    font-weight: 600;
+}
+/*  -------------------------------------------------------  */
+/*           media query de la interna de Contacto           */
+/*  -------------------------------------------------------  */
+@media (max-width:768px) {
+    .formulario {
+        width: 85vw; /*Adapta el ancho del formulario para mobile*/
+    } 
+}
+/*  -----------  */
+/*    Footer     */
+/*  ------------ */
+
+footer {
+    color:#444;
+    font-size: 1.5rem;
+    padding: 2rem;
+    background: #FFE4C4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.redes__sociales ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 15px;
+}
+.redes__sociales ul li a i {
+    display: inline-block;
+    font-size: 3rem;
+}   
+
+
+
+/*  --------------------------------------------  */
+/*                  Eliminar                      */
+/*  --------------------------------------------- */
+/* .iconos {
+    height: 2.5rem;
+} */

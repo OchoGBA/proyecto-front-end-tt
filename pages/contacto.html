@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="header">
+        <a class="header__logo"  href="../index.html"><img class="header__logo" src="../img/logo.png" alt="Logo de mi web"></a>
+        <!--  Menú de navegación  -->
+        <nav class="header__nav">
+            <ul> 
+                <li><a href="../index.html">Home</a></li> 
+                <li><a href="./contacto.html">Contacto</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto">
+        <section class="formulario">
+            <h1 class="titulo__contacto" >Contactanos</h1>
+            <form class="form" action="https://formspree.io/f/xldwkkeq" method="post" autocomplete="on"/>
+
+            <div class="campo__form">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Juan Perez" required>
+            </div>
+
+            <div class="campo__form">
+            <label for="email">Correo: </label>
+            <input type="email" name="email" id="email" placeholder="usuario@dominio.com" /> 
+            </div>
+
+            <div class="campo__form">
+                <label for="mensaje">Mensaje: </label>
+                <textarea rows="6" name="message" id="mensaje" placeholder="Ingrese su consulta"></textarea>
+            </div>
+
+            <input type="hidden" name="subject" value="Contacto desde el sitio"> 
+                    
+            <button class="boton__enviar" type="submit">Enviar</button>
+        </form>
+
+        </section>
+    </main>
+    <footer class="footer"> 
+     <p>© 2025 Mi Sitio Web. Todos los derechos reservados a Ocho casi dev.</p> 
+    <div class="redes__sociales">
+        <ul>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" style="color: #01284f;"></i></a></li>
+            <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube" style="color: #01284f;"></i></a></li>
+            <li><a href="https://github.com/"><i class="fa-brands fa-github" style="color: #01284f;"></i></a></li>
+        </ul> 
+    </div>
+    </footer> 
+</body>
+</html>
