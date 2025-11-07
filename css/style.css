@@ -32,7 +32,7 @@ body {
 /*    Header    */
 /*  ----------  */
 
-.header__logo {
+.header_logo {
     width: 70px;
     padding: 1rem;
     margin-left: 2rem;    
@@ -55,11 +55,11 @@ body {
     justify-content: center;
     gap: 2rem;
 }
-.header__nav {
+.header_nav {
     font-size: 2.5rem;
     font-weight: 600;
 }
-.header__nav a {
+.header_nav a {
     text-decoration: none;
     color:#1B4079;
     display: inline-block;
@@ -79,7 +79,7 @@ main {
     align-items: center;
     background: var(--color-white);
 }
-.titulo__home {
+.titulo_home {
 color: var(--color-letra);
     font-size: 6rem;
     width: 100%;
@@ -102,7 +102,7 @@ color: var(--color-letra);
 /*   Producto   */
 /*  ----------  */
 
-.titulo__productos {
+.titulo_productos {
     font-size: 6rem;
     margin:1rem 0 2rem;
 }
@@ -159,7 +159,7 @@ color: var(--color-letra);
 /*     media query de Home incluyendo Header, Body y Footer     */
 /*  ----------------------------------------------------------  */
 @media (max-width:768px) {
-    .header__logo {
+    .header_logo {
         margin-left: 1rem;
     }
     .header nav {
@@ -169,7 +169,7 @@ color: var(--color-letra);
     gap: 1rem;
     }
 
-    .titulo__home {
+    .titulo_home {
         font-size: 5rem;
         margin-top: 3rem;
     }
@@ -187,7 +187,7 @@ color: var(--color-letra);
     display: flex;
     justify-content: center;
 }
-.titulo__contacto {
+.titulo_contacto {
     margin: 1rem 0 2rem;
     color: var(--color-white);
     text-decoration: underline;
@@ -197,7 +197,8 @@ color: var(--color-letra);
 }
 .formulario {
     margin: 5rem 1rem;
-    width: 50vw;
+    width: 80vw;
+    max-width: 768px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -211,7 +212,7 @@ label {
     margin-top: 25px;
     margin-bottom: 10px;
 }
-.campo__form {
+.campo_form {
     display: flex;
     align-items: stretch;
     flex-direction: column;
@@ -221,7 +222,7 @@ input, textarea {
     font-family: "roboto condensed", "Montserrat", "san-serif";
 }
 
-.boton__enviar {
+.boton_enviar {
     margin-top: 25px;
     padding: 10px 15px;
     border: 2px solid var(--color-peach);
@@ -229,7 +230,7 @@ input, textarea {
     color: var(--color-white);
     border-radius: 10px;
 }
-.boton__enviar:hover {
+.boton_enviar:hover {
     background: var(--color-peach-secundario);
     font-weight: 600;
 }
@@ -254,14 +255,14 @@ footer {
     flex-direction: column;
     text-align: center;
 }
-.redes__sociales ul {
+.redes_sociales ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     margin-top: 15px;
 }
-.redes__sociales ul li a i {
+.redes_sociales ul li a i {
     display: inline-block;
     font-size: 3rem;
 }   
