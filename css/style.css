@@ -2,23 +2,28 @@
 /*  CSS General  */
 /*  ------------ */
 
-* { /* Selector universal */
-    margin:0 ; 
-    padding: 0; 
-    box-sizing: border-box; 
-} 
-:root { /* Paleta de colores de mi web */
-    --color-peach:#DCA47C;
-    --color-peach-secundario:#FFD3B6;
-    --color-white:#FCF8F3;
-    --color-sage:#698474;
-    --color-letra:#1B4079;
-    }
-
-html { 
-    font-size: 62.5%; /* Para que 1rem = 10px */
-    color:#000 
+* {
+    /* Selector universal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    /* Paleta de colores de mi web */
+    --color-peach: #DCA47C;
+    --color-peach-secundario: #FFD3B6;
+    --color-white: #FCF8F3;
+    --color-sage: #698474;
+    --color-letra: #1B4079;
+}
+
+html {
+    font-size: 62.5%;
+    /* Para que 1rem = 10px */
+    color: #000
+}
+
 body {
     font-family: "roboto condensed", "Montserrat", "san-serif";
     font-size: 1.6rem;
@@ -35,7 +40,10 @@ body {
 .header_logo {
     width: 70px;
     padding: 1rem;
-    margin-left: 2rem;    
+    margin-left: 2rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .header {
@@ -43,28 +51,32 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
+
 .header nav {
     padding: 1rem;
-    margin-right:2rem;
+    margin-right: 2rem;
 }
+
 .header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
+
 .header_nav {
     font-size: 2.5rem;
     font-weight: 600;
 }
+
 .header_nav a {
     text-decoration: none;
-    color:#1B4079;
+    color: #1B4079;
     display: inline-block;
-    padding:1rem
-} 
+    padding: 1rem
+}
 
 /*  -----------  */
 /*     Main      */
@@ -79,8 +91,9 @@ main {
     align-items: center;
     background: var(--color-white);
 }
+
 .titulo_home {
-color: var(--color-letra);
+    color: var(--color-letra);
     font-size: 6rem;
     width: 100%;
     text-align: center;
@@ -104,18 +117,19 @@ color: var(--color-letra);
 
 .titulo_productos {
     font-size: 6rem;
-    margin:1rem 0 2rem;
+    margin: 1rem 0 2rem;
 }
-.productos { 
-    display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: stretch; 
+
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     margin-bottom: 3rem;
-} 
- 
-.producto { 
+}
+
+.producto {
     margin: 10px;
     background-color: var(--color-sage);
     color: #fff;
@@ -126,57 +140,92 @@ color: var(--color-letra);
     width: 30rem;
     align-items: stretch;
     gap: 1rem;
-} 
+}
+
 .producto:hover {
     box-shadow: inset -2px 2px 15px 0px #fffa;
 }
 
 .producto img {
     width: 100%;
-    object-fit: contain; /* que no se deformen */
+    object-fit: contain;
+    /* que no se deformen */
 }
+
+.tarjeta_producto img {
+    width: 100%;
+    object-fit: contain;
+    /* que no se deformen */
+}
+
 .nombre_producto {
     font-size: 2rem;
     margin: 10px 0;
 }
+
 .producto_descripcion {
     font-size: 1.4rem;
     margin: 10px 0;
-    flex-grow: 1; /* se expande para empujar el resto hacia abajo */
+    flex-grow: 1;
+    /* se expande para empujar el resto hacia abajo */
 }
+
 .producto_precio {
     margin-top: auto;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
-    background: var(--color-sage);
+    background: var(--color-peach);
     border-radius: 10px;
     padding: 10px;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-peach-secundario);
 }
 
-/*  ----------------------------------------------------------  */
-/*     media query de Home incluyendo Header, Body y Footer     */
-/*  ----------------------------------------------------------  */
-@media (max-width:768px) {
-    .header_logo {
-        margin-left: 1rem;
-    }
-    .header nav {
-        margin-right: 1rem;
-    }
-    .header nav ul {
-    gap: 1rem;
-    }
+/*  -----------------  */
+/*       carrito       */
+/*  ------------------ */
+.titulo_carrito {
+    color: var(--color-letra);
+    font-size: 6rem;
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
 
-    .titulo_home {
-        font-size: 5rem;
-        margin-top: 3rem;
-    }
-    .parrafo_bienvenida {
-    text-align: justify;
-    font-size: 2.5rem;
-    }
+.btn {
+    margin-top: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--color-peach-secundario);
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid var(--color-peach);
+    cursor: pointer;
+    color: var(--color-letra);
+}
+
+.btn:hover {
+    background: var(--color-peach);
+    color: var(--color-white);
+}
+
+.btn:active {
+    background: var(--color-letra);
+    color: var(--color-peach-secundario);
+}
+
+.box_total {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background: var(--color-sage);
+    border: 2px solid var(--color-letra);
+    border-radius: 15px;
+    padding: 15px 40px;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 /*  ----------  */
@@ -187,6 +236,7 @@ color: var(--color-letra);
     display: flex;
     justify-content: center;
 }
+
 .titulo_contacto {
     margin: 1rem 0 2rem;
     color: var(--color-white);
@@ -195,6 +245,7 @@ color: var(--color-letra);
     text-align: center;
     font-size: 4rem;
 }
+
 .formulario {
     margin: 5rem 1rem;
     width: 80vw;
@@ -207,54 +258,57 @@ color: var(--color-letra);
     border-radius: 10px;
     box-shadow: 0 0 20px var(--color-sage);
 }
+
 label {
     font-weight: 800;
     margin-top: 25px;
     margin-bottom: 10px;
 }
+
 .campo_form {
     display: flex;
     align-items: stretch;
     flex-direction: column;
 }
-input, textarea {
-    padding: 1rem 0.5rem; /*espaciado interno a las casillas del formulario */
+
+input,
+textarea {
+    padding: 1rem 0.5rem;
+    /*espaciado interno a las casillas del formulario */
     font-family: "roboto condensed", "Montserrat", "san-serif";
 }
 
 .boton_enviar {
-    margin-top: 25px;
-    padding: 10px 15px;
+    padding: 10px 45px;
     border: 2px solid var(--color-peach);
     background-color: var(--color-peach);
     color: var(--color-white);
     border-radius: 10px;
+    display: block;
+    margin: 25px auto 0;
+    font-size: 1.8rem;
 }
+
 .boton_enviar:hover {
     background: var(--color-peach-secundario);
     font-weight: 600;
+    cursor: pointer;
 }
-/*  -------------------------------------------------------  */
-/*           media query de la interna de Contacto           */
-/*  -------------------------------------------------------  */
-@media (max-width:768px) {
-    .formulario {
-        width: 85vw; /*Adapta el ancho del formulario para mobile*/
-    } 
-}
+
 /*  -----------  */
 /*    Footer     */
 /*  ------------ */
 
 footer {
-    color:#444;
+    color: var(--color-white);
     font-size: 1.5rem;
     padding: 2rem;
-    background: var(--color-peach-secundario);
+    background: var(--color-sage);
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+
 .redes_sociales ul {
     list-style: none;
     display: flex;
@@ -262,7 +316,81 @@ footer {
     gap: 1.5rem;
     margin-top: 15px;
 }
+
 .redes_sociales ul li a i {
     display: inline-block;
     font-size: 3rem;
-}   
+}
+
+/* -------------------------------------------- */
+/*                   Carrito                    */
+/* -------------------------------------------- */
+.mensaje_carrito_vacio {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-letra);
+    font-weight: 600;
+}
+
+.acciones_carrito {
+    margin-top: 2rem;
+}
+
+.tarjeta_producto {
+    margin: 10px;
+    background-color: var(--color-sage);
+    color: #fff;
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+#contenedor_carrito {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+
+/*  ------------------------------------  */
+/*     media query de todo el proyecto    */
+/*  ------------------------------------  */
+@media (max-width:768px) {
+    .header_logo {
+        margin-left: 1rem;
+    }
+
+    .header nav {
+        margin-right: 1rem;
+    }
+
+    .header_nav {
+        font-size: 1.9rem;
+    }
+
+    .header nav ul {
+        gap: 0.5rem;
+    }
+
+    .titulo_home, .titulo_carrito {
+        font-size: 5rem;
+        margin-top: 3rem;
+    }
+
+    .parrafo_bienvenida {
+        text-align: justify;
+        font-size: 2.5rem;
+    }
+
+    .formulario {
+        width: 85vw;
+        /*Adapta el ancho del formulario para mobile*/
+    }
+}
