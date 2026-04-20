@@ -4,10 +4,6 @@ export const actualizarContador = (carrito) => {
         contador.textContent = carrito.length
     }
 }
-/* 
-export const mostrarMensaje = (texto) => {
-    alert(texto)
-} */
 
 
     export const mostrarMensaje = (texto) => {

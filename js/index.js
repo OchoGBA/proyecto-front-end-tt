@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const carrito = obtenerCarrito()
     actualizarContador(carrito)
 
-    fetch("./data/productos.json")
+    fetch("https://fakestoreapi.com/products")
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`Error HHTP status: ${res.status}`);
@@ -32,23 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 //creo imagen
                 let imagen = document.createElement("img")
-                imagen.src = producto.imagen
+                imagen.src = producto.image
                 imagen.alt = producto.alt
 
                 //creo nombre producto
                 let tituloProducto = document.createElement("h3")
                 tituloProducto.classList.add("nombre_producto")
-                tituloProducto.textContent = producto.nombre
+                tituloProducto.textContent = producto.title
 
                 //creo descripcion
                 let descripcion = document.createElement("p")
                 descripcion.classList.add("producto_descripcion")
-                descripcion.textContent = producto.descripcion
+                descripcion.textContent = producto.description
 
                 //creo precio
                 let precio = document.createElement("p")
                 precio.classList.add("producto_precio")
-                precio.textContent = `$${producto.precio}`
+                precio.textContent = `$ ${producto.price}`
 
                 //creo boton
                 let boton = document.createElement("button")

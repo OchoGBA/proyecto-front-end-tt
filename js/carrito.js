@@ -32,23 +32,23 @@ const renderizarCarrito = () => {
 
         //creo imagen
         let imagen = document.createElement("img")
-        imagen.src = `../${producto.imagen}`;
-        imagen.alt = producto.alt
+        imagen.src = producto.image;
+        imagen.alt = producto.title
 
         //creo nombre producto
         let tituloProducto = document.createElement("h3")
         tituloProducto.classList.add("nombre_producto")
-        tituloProducto.textContent = producto.nombre
+        tituloProducto.textContent = producto.title
 
         //creo descripcion
-        let descripcion = document.createElement("p")
+/*         let descripcion = document.createElement("p")
         descripcion.classList.add("producto_descripcion")
-        descripcion.textContent = producto.descripcion
+        descripcion.textContent = producto.description */
 
         //creo precio
         let precio = document.createElement("p")
         precio.classList.add("producto_precio")
-        precio.textContent = `$${producto.precio}`
+        precio.textContent = `$ ${producto.price}`
 
         //creo boton eliminar
         let botonEliminar = document.createElement("button")
@@ -65,8 +65,8 @@ const renderizarCarrito = () => {
 
         card.appendChild(imagen)
         card.appendChild(tituloProducto)
-        card.appendChild(descripcion)
-        card.appendChild(precio)
+/*         card.appendChild(descripcion)
+ */        card.appendChild(precio)
         card.appendChild(botonEliminar)
 
         contenedor.appendChild(card)

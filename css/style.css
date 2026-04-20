@@ -156,6 +156,7 @@ main {
     width: 100%;
     object-fit: contain;
     /* que no se deformen */
+    height: stretch;
 }
 
 .nombre_producto {
@@ -237,15 +238,22 @@ main {
     color: var(--color-white);
     padding: 2.5rem 5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     font-weight: 600;
     animation: slideIn 0.5s ease-out;
 }
 
 @keyframes slideIn {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /*  ----------  */
@@ -399,7 +407,8 @@ footer {
         gap: 0.5rem;
     }
 
-    .titulo_home, .titulo_carrito {
+    .titulo_home,
+    .titulo_carrito {
         font-size: 5rem;
         margin-top: 3rem;
     }

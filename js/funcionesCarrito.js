@@ -29,7 +29,7 @@ export const vaciarCarrito = () => {
 export const total = () => {
     const carrito = obtenerCarrito()
     let subtotal = carrito.reduce((acumulador, producto) => {
-        return acumulador + parseInt(producto.precio);
+        return acumulador + parseInt(producto.price);
     }, 0);
     return subtotal;
 }
