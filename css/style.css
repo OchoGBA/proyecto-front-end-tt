@@ -146,13 +146,7 @@ main {
     box-shadow: inset -2px 2px 15px 0px #fffa;
 }
 
-.producto img {
-    width: 100%;
-    object-fit: contain;
-    /* que no se deformen */
-}
-
-.tarjeta_producto img {
+.producto img, .tarjeta_producto img {
     width: 100%;
     object-fit: contain;
     /* que no se deformen */
